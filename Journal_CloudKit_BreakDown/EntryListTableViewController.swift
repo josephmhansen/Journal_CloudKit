@@ -13,7 +13,14 @@ class EntryListTableViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        tableView.reloadData()
+        let nc = NSNotificationCenter.defaultCenter()
+        nc.addObserver(self, selector: #selector(entriesWereUpdated), name: EntriesControllerDidRefreshNotification, object: nil)
+    }
+    
+    func entriesWereUpdated(notification: NSNotification) {
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.tableView.reloadData()
+        })
     }
     
     // MARK: - Table view data source
@@ -32,18 +39,18 @@ class EntryListTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            
-            let entry = EntryController.sharedController.entries[indexPath.row]
-            
-            EntryController.sharedController.removeEntry(entry)
-            
-            // Delete the row from the table view
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-            
-        }
-    }
+//    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+//        if editingStyle == .Delete {
+//            
+//            let entry = EntryController.sharedController.entries[indexPath.row]
+//            
+//            EntryController.sharedController.removeEntry(entry)
+//            
+//            // Delete the row from the table view
+//            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+//            
+//        }
+//    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         

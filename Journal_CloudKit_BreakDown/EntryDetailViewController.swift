@@ -25,13 +25,14 @@ class EntryDetailViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func saveButtonTapped(sender: AnyObject) {
         
-        if let entry = self.entry {
-            entry.title = self.titleTextField.text!
-            entry.text = self.bodyTextView.text
-            entry.timestamp = NSDate()
+        if var entry = self.entry {
+            entry.title = titleTextField.text!
+            entry.body = self.bodyTextView.text
         } else {
-            let newEntry = Entry(title: self.titleTextField.text!, text: self.bodyTextView.text)
-            EntryController.sharedController.addEntry(newEntry)
+            let newEntry = Entry(title: self.titleTextField.text!, body: self.bodyTextView.text)
+            EntryController.sharedController.postNewEntry(newEntry, completion: { (_) in
+                
+            })
             self.entry = newEntry
         }
         
@@ -48,7 +49,7 @@ class EntryDetailViewController: UIViewController, UITextFieldDelegate {
         self.entry = entry
         
         self.titleTextField.text = entry.title
-        self.bodyTextView.text = entry.text
+        self.bodyTextView.text = entry.body
     }
     
     // MARK: UITextFieldDelegate
