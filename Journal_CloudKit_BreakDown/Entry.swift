@@ -8,24 +8,10 @@
 
 import Foundation
 
-class Entry: Equatable {
+struct Entry {
     
-    private let timestampKey = "timestamp"
-    private let titleKey = "title"
-    private let textKey = "text"
-    
-    var timestamp: NSDate
     var title: String
-    var text: String
-    
-    init(timestamp: NSDate = NSDate(), title: String, text: String) {
-        
-        self.timestamp = timestamp
-        self.title = title
-        self.text = text
-    }
+    var body: String
 }
 
-func == (lhs: Entry, rhs: Entry) -> Bool {
-    return ObjectIdentifier(lhs) == ObjectIdentifier(rhs)
-}
+

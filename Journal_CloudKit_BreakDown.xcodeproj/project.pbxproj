@@ -16,6 +16,8 @@
 		BCC74B2D1D57D47400304BB7 /* EntryListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC74B2C1D57D47400304BB7 /* EntryListTableViewController.swift */; };
 		BCC74B2F1D57D4CC00304BB7 /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC74B2E1D57D4CC00304BB7 /* EntryController.swift */; };
 		BCC74B311D57D57700304BB7 /* EntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC74B301D57D57700304BB7 /* EntryDetailViewController.swift */; };
+		BCC74B351D57DE5700304BB7 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC74B341D57DE5700304BB7 /* CloudKitManager.swift */; };
+		BCC74B371D57E19600304BB7 /* Entry+CloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC74B361D57E19600304BB7 /* Entry+CloudKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		BCC74B2C1D57D47400304BB7 /* EntryListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryListTableViewController.swift; sourceTree = "<group>"; };
 		BCC74B2E1D57D4CC00304BB7 /* EntryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
 		BCC74B301D57D57700304BB7 /* EntryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryDetailViewController.swift; sourceTree = "<group>"; };
+		BCC74B341D57DE5700304BB7 /* CloudKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
+		BCC74B361D57E19600304BB7 /* Entry+CloudKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Entry+CloudKit.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				BCC74B2E1D57D4CC00304BB7 /* EntryController.swift */,
+				BCC74B341D57DE5700304BB7 /* CloudKitManager.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -99,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				BCA42E841D57D1C0004D99A4 /* Entry.swift */,
+				BCC74B361D57E19600304BB7 /* Entry+CloudKit.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -189,7 +195,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCA42E851D57D1C0004D99A4 /* Entry.swift in Sources */,
+				BCC74B371D57E19600304BB7 /* Entry+CloudKit.swift in Sources */,
 				BCA42E6C1D57D136004D99A4 /* AppDelegate.swift in Sources */,
+				BCC74B351D57DE5700304BB7 /* CloudKitManager.swift in Sources */,
 				BCC74B2F1D57D4CC00304BB7 /* EntryController.swift in Sources */,
 				BCC74B311D57D57700304BB7 /* EntryDetailViewController.swift in Sources */,
 				BCC74B2D1D57D47400304BB7 /* EntryListTableViewController.swift in Sources */,
