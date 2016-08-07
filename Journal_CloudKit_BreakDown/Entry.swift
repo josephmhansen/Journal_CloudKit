@@ -24,29 +24,6 @@ class Entry: Equatable {
         self.title = title
         self.text = text
     }
-    
-    init?(dictionary: [String: AnyObject]) {
-        guard let timestamp = dictionary[timestampKey] as? NSDate,
-            let title = dictionary[titleKey] as? String,
-            let text = dictionary[textKey] as? String else { return nil }
-        
-        self.timestamp = timestamp
-        self.title = title
-        self.text = text
-        
-    }
-    
-    func dictionaryCopy() -> [String: AnyObject] {
-        
-        let dictionary = [
-            timestampKey : self.timestamp,
-            titleKey : self.title,
-            textKey : self.text
-        ]
-        
-        return dictionary
-    }
-    
 }
 
 func == (lhs: Entry, rhs: Entry) -> Bool {
