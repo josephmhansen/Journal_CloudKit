@@ -29,3 +29,6 @@
             }
         }
     }
+
+** Black Diamond **
+-	Add the ability to be able to delete entries. This should delete an entry off the EntryListTalbeViewController as well as delete the CKRecord associated with it
