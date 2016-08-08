@@ -32,18 +32,18 @@ class EntryListTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            
-            let entry = EntryController.sharedController.entries[indexPath.row]
-            
-            EntryController.sharedController.removeEntry(entry)
-            
-            // Delete the row from the table view
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-            
-        }
-    }
+//    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+//        if editingStyle == .Delete {
+//            
+//            let entry = EntryController.sharedController.entries[indexPath.row]
+//            
+//            EntryController.sharedController.removeEntry(entry)
+//            
+//            // Delete the row from the table view
+//            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+//            
+//        }
+//    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
