@@ -30,7 +30,9 @@ class EntryDetailViewController: UIViewController, UITextFieldDelegate {
             entry.body = self.bodyTextView.text
         } else {
             let newEntry = Entry(title: self.titleTextField.text!, body: self.bodyTextView.text)
-            EntryController.sharedController.addEntry(newEntry)
+            EntryController.sharedController.postNewEntry(newEntry, completion: { (_) in
+                
+            })
             self.entry = newEntry
         }
         
