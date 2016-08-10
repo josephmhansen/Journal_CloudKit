@@ -10,8 +10,15 @@ import Foundation
 
 struct Entry {
     
+   
+    
     var date: NSDate
     var title: String
     var body: String
 }
 
+protocol EntryDelegate
+{
+    func errorUpdating(error: NSError)
+    func modelUpdated()
+}

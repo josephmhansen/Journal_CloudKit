@@ -19,11 +19,11 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bMq-XV-GFU" id="dVi-jB-iUl">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7Xu-rE-lAe">
-                                            <rect key="frame" x="15" y="0.0" width="570" height="43"/>
+                                            <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -70,32 +70,39 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5tI-9T-ynp">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5tI-9T-ynp">
                                 <rect key="frame" x="20" y="131" width="560" height="414"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jed-CS-52K">
-                                <rect key="frame" x="20" y="550" width="560" height="30"/>
-                                <state key="normal" title="Clear"/>
-                                <connections>
-                                    <action selector="clearButtonTapped:" destination="KIl-TA-qqq" eventType="touchUpInside" id="Xqv-3M-tnu"/>
-                                </connections>
-                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BGP-l8-heF">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" id="o6b-3A-Pr0">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Jed-CS-52K">
+                                            <rect key="frame" x="20" y="7" width="560" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Clear"/>
+                                            <connections>
+                                                <action selector="clearButtonTapped:" destination="KIl-TA-qqq" eventType="touchUpInside" id="Xqv-3M-tnu"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="5tI-9T-ynp" secondAttribute="trailing" id="4mB-IH-TRl"/>
+                            <constraint firstItem="Mav-on-9TS" firstAttribute="top" secondItem="BGP-l8-heF" secondAttribute="bottom" id="Goy-H3-Eqn"/>
+                            <constraint firstItem="BGP-l8-heF" firstAttribute="leading" secondItem="CYV-LO-vBI" secondAttribute="leadingMargin" constant="-20" id="HYD-JY-vFk"/>
                             <constraint firstItem="NqZ-y3-gyb" firstAttribute="top" secondItem="0Jx-Ra-o6x" secondAttribute="bottom" constant="32" id="M0V-tF-P7G"/>
                             <constraint firstItem="NqZ-y3-gyb" firstAttribute="leading" secondItem="CYV-LO-vBI" secondAttribute="leadingMargin" id="NdF-RI-x8r"/>
-                            <constraint firstItem="Jed-CS-52K" firstAttribute="leading" secondItem="CYV-LO-vBI" secondAttribute="leadingMargin" id="ODu-dF-DqR"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Jed-CS-52K" secondAttribute="trailing" id="RtT-pp-Qij"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NqZ-y3-gyb" secondAttribute="trailing" id="Z27-w8-68v"/>
                             <constraint firstItem="5tI-9T-ynp" firstAttribute="top" secondItem="NqZ-y3-gyb" secondAttribute="bottom" constant="5" id="atF-00-ZLO"/>
-                            <constraint firstItem="Jed-CS-52K" firstAttribute="top" secondItem="5tI-9T-ynp" secondAttribute="bottom" constant="5" id="dHm-xG-YdY"/>
-                            <constraint firstItem="Mav-on-9TS" firstAttribute="top" secondItem="Jed-CS-52K" secondAttribute="bottom" constant="20" id="mg9-N0-AWW"/>
+                            <constraint firstItem="Mav-on-9TS" firstAttribute="top" secondItem="BGP-l8-heF" secondAttribute="bottom" id="jfj-Rm-Stq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BGP-l8-heF" secondAttribute="trailing" constant="-20" id="jtJ-Pd-Jn8"/>
                             <constraint firstItem="5tI-9T-ynp" firstAttribute="leading" secondItem="CYV-LO-vBI" secondAttribute="leadingMargin" id="qTX-Z9-ri8"/>
                         </constraints>
                     </view>
