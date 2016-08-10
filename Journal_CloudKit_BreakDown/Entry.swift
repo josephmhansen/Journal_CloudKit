@@ -10,6 +10,8 @@ import Foundation
 
 struct Entry {
     
+    var date: NSDate
     var title: String
     var body: String
 }
+

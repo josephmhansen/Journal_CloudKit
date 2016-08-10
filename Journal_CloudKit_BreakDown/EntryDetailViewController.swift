@@ -25,11 +25,13 @@ class EntryDetailViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func saveButtonTapped(sender: AnyObject) {
         
+        guard let text = self.titleTextField.text,
+            body = self.bodyTextView.text else { return }
+        
         if var entry = self.entry {
-            entry.title = titleTextField.text!
             entry.body = self.bodyTextView.text
         } else {
-            let newEntry = Entry(title: self.titleTextField.text!, body: self.bodyTextView.text)
+            let newEntry = Entry(date: NSDate(), title: text, body: body)
             EntryController.sharedController.addEntry(newEntry)
             self.entry = newEntry
         }
